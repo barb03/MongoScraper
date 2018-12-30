@@ -1,11 +1,9 @@
 
 $(document).ready(function(){
 
-
-
     var articleContainer = $(".article-container");
     $(document).on("click", ".btn.save", handleArticleSave);
-    $(document).on("click", ".scrape-new", handleArticleSave);
+    $(document).on("click", ".scrape-new", handleArticleScrape);
 
     
     initPage();
@@ -109,7 +107,7 @@ $(document).ready(function(){
         });
     }
 
-    function handleArticleToScrape(){
+    function handleArticleScrape(){
 
         $.get("/api/fetch")
         .then(function(data){
