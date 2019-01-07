@@ -1,5 +1,4 @@
 var mongoose = require("mongoose");
-
 var Schema = mongoose.Schema;
 
 var headlineSchema = new Schema({
@@ -8,7 +7,7 @@ var headlineSchema = new Schema({
         required: true,
         unique: true
     },
-    summary: {
+    link: {
         type: String,
         required: true
     },
@@ -17,7 +16,6 @@ var headlineSchema = new Schema({
         type: Boolean,
         default: false
     }
-
 });
 
 var Headline = mongoose.model("Headline", headlineSchema);

@@ -1,6 +1,3 @@
-
-
-
 var Note = require("../models/Note");
 var makeDate = require("../scripts/date");
 
@@ -10,6 +7,7 @@ module.exports = {
             _headlineId: data._id
         }, cb);
     },
+
     save: function(data, cb){
         var newNote = {
             _headlineId: data._id,
@@ -27,6 +25,7 @@ module.exports = {
             }
         });
     },
+    
     delete: function(data, cb){
         Note.remove({
             _id: data._id
