@@ -44,7 +44,7 @@ $(document).ready(function(){
             "</div>"
         ].join(""));
 
-        panel.data("_id", article_id);
+        // panel.data("_id", article_id);
 
         return panel;
     }
