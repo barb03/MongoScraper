@@ -12,7 +12,7 @@ var scrape = function(cb){
             .children("h2")            
             .text();
             var sum = $(this)
-            .children("p.summary")
+            .children("p")
             .text();
             // console.log("head", head);
             // console.log("sum", sum);
@@ -20,7 +20,7 @@ var scrape = function(cb){
 
             // if(head && sum){
             //     var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
-            //     var sumNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
+            //     var sumNeat = sum.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
 
             //     var dataToAdd = {
             //         headline: headNeat,
@@ -28,7 +28,7 @@ var scrape = function(cb){
             //     };
 
             //     // console.log("dataToAdd", dataToAdd);
-            //     articles.push(dataToAdd);
+                // articles.push(dataToAdd);
             // }
         });
         cb(articles);        
